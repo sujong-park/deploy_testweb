@@ -1,51 +1,156 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ko">
 <head>
-   <title>WEB1 - WEB </title>
-   <meta charset="utf-8">
-   <style>
-      body {margin: 0;}
-      h1 {margin: 0; padding: 20px; border-bottom: 1px solid gray;}
-      ol {margin: 0; padding: 20px; border-right: 1px solid gray;}
-      #grid {display: grid; grid-template-columns: 200px 1fr;}
-      #article {padding: 20px;}
-      
-      @media(max-width: 800px){
-         h1 {border: none;}
-         
-         #grid {display: block;}
-         #grid ol {border: none;}
-      }
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-   <h1>박수종 홈페이지</h1>
-   <h1><a href="index.html">WEB</a></h1>
-   <div id="grid">
-      <ol>
-         <li><a href="1.html">HTML</a></li>
-         <li><a href="2.html">CSS</a></li>
-         <li><a href="3.html">JavaScript</a></li>
-      </ol>
-      <div id="article">
-         <h2>WEB이란 무엇인가?</h2>
-         <p style="margin-top: 40px;">
-            The World Wide Web (WWW), commonly known as the Web, is the world's dominant software platform.[1] It was
-            originally a hypertext document management system[2] accessed over the Internet.[3]
-            The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be accessed by users by
-            a software application called a web browser, and are published by a software application called a web server.
-            Web resources may be any type of downloaded media, but web pages are hypertext documents formatted in
-            Hypertext Markup Language (HTML). Special HTML syntax displays embedded hyperlinks with URLs, which permits users
-            to navigate to other web resources. In addition to text, web pages may contain references to images, video, audio,
-            and
-            software components, which are either displayed or internally executed in the user's web browser to render pages
-            or
-            streams of multimedia conten
-         </p>
-      </div>
-   </div>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="./index.html">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="#hero">홈</a></li>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#portfolio">포트폴리오</a></li>
+                    <li><a href="#skills">스킬</a></li>
+                    <li><a href="#contact">연락처</a></li>
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="#">로그인</a></li>
+                    <li id="nav-signup"><a href="#">회원가입</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>안녕하세요,</h1>
+            <p>박수종 홈페이지 입니다.</p>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="content">
+                <img src="https://via.placeholder.com/300" alt="프로필 사진">
+                <div class="about-text">
+                    <h2>소개</h2>
+                    <p>안녕하세요! 저는 웹 개발과 디자인에 열정을 가진 프론트엔드 개발자 [이름]입니다.</p>
+                    <p>다양한 프로젝트를 통해 사용자 친화적인 웹사이트를 만드는 것을 목표로 하고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 포트폴리오 섹션 -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>포트폴리오</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300" alt="프로젝트 1">
+                    <div class="details">
+                        <h3>프로젝트 이름 1</h3>
+                        <p>프로젝트 설명 1</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300" alt="프로젝트 2">
+                    <div class="details">
+                        <h3>프로젝트 이름 2</h3>
+                        <p>프로젝트 설명 2</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300" alt="프로젝트 3">
+                    <div class="details">
+                        <h3>프로젝트 이름 3</h3>
+                        <p>프로젝트 설명 3</p>
+                    </div>
+                </div>
+                <!-- 추가 프로젝트는 같은 형식으로 추가 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 스킬 섹션 -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>스킬</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <img src="https://via.placeholder.com/50" alt="HTML5">
+                    <p>HTML5</p>
+                </div>
+                <div class="skill">
+                    <img src="https://via.placeholder.com/50" alt="CSS3">
+                    <p>CSS3</p>
+                </div>
+                <div class="skill">
+                    <img src="https://via.placeholder.com/50" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="https://via.placeholder.com/50" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <img src="https://via.placeholder.com/50" alt="Photoshop">
+                    <p>Photoshop</p>
+                </div>
+                <div class="skill">
+                    <img src="https://via.placeholder.com/50" alt="Git">
+                    <p>Git</p>
+                </div>
+                <!-- 추가 스킬은 같은 형식으로 추가 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>연락처</h2>
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="이름" required>
+                <input type="email" name="email" placeholder="이메일" required>
+                <textarea name="message" rows="5" placeholder="메시지" required></textarea>
+                <button type="submit">보내기</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 [이름]. 모든 권리 보유.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">🔗</a>
+                <a href="#" target="_blank">🔗</a>
+                <a href="#" target="_blank">🔗</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
