@@ -11,17 +11,15 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><a href="./index.html">Home</a></div>
+                <div class="logo"><a href="/">Home</a></div>
                 <ul id="nav-links">
-                    <li><a href="#hero">홈</a></li>
-                    <li><a href="#about">소개</a></li>
-                    <li><a href="#portfolio">포트폴리오</a></li>
-                    <li><a href="#skills">스킬</a></li>
-                    <li><a href="#contact">연락처</a></li>
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
                 </ul>
                 <ul id="nav-member">
-                    <li id="nav-login"><a href="#">로그인</a></li>
-                    <li id="nav-signup"><a href="#">회원가입</a></li>
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
                 </ul>
                 <div class="menu-toggle" id="mobile-menu">
                     ☰
@@ -33,7 +31,7 @@
     <!-- 히어로 섹션 -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <h1>안녕하세요,</h1>
+            <h1>안녕하세요!</h1>
             <p>박수종 홈페이지 입니다.</p>
         </div>
     </section>
@@ -42,11 +40,12 @@
     <section class="about" id="about">
         <div class="container">
             <div class="content">
-                <img src="https://via.placeholder.com/300" alt="프로필 사진">
+                <!-- <img src="https://via.placeholder.com/300" alt="프로필 사진"> -->
+                <img src="/img/profile.jpg" alt="프로필 사진">
                 <div class="about-text">
                     <h2>소개</h2>
-                    <p>안녕하세요! 저는 웹 개발과 디자인에 열정을 가진 프론트엔드 개발자 [이름]입니다.</p>
-                    <p>다양한 프로젝트를 통해 사용자 친화적인 웹사이트를 만드는 것을 목표로 하고 있습니다.</p>
+                    <p>안녕하세요! 저는 박수종입니다.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consectetur asperiores praesentium molestiae, provident minus culpa animi quos sint, nesciunt similique ea unde ab adipisci explicabo reprehenderit. Ipsam, optio nihil?</p>
                 </div>
             </div>
         </div>
@@ -57,34 +56,55 @@
         <div class="container">
             <h2>포트폴리오</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="프로젝트 1">
+                <a href="/detail.html" class="portfolio-item">
+                    <img src="/img/portfolio01.jpg" alt="프로젝트 1">
                     <div class="details">
                         <h3>프로젝트 이름 1</h3>
                         <p>프로젝트 설명 1</p>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="프로젝트 2">
+                </a>
+                <a href="/detail.html" class="portfolio-item">
+                    <img src="/img/portfolio02.jpg" alt="프로젝트 2">
                     <div class="details">
                         <h3>프로젝트 이름 2</h3>
                         <p>프로젝트 설명 2</p>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="프로젝트 3">
+                </a>
+                <a href="/detail.html" class="portfolio-item">
+                    <img src="/img/portfolio03.jpg" alt="프로젝트 3">
                     <div class="details">
                         <h3>프로젝트 이름 3</h3>
                         <p>프로젝트 설명 3</p>
                     </div>
-                </div>
+                </a>
+                <a href="/detail.html" class="portfolio-item">
+                    <img src="/img/portfolio04.jpg" alt="프로젝트 4">
+                    <div class="details">
+                        <h3>프로젝트 이름 4</h3>
+                        <p>프로젝트 설명 4</p>
+                    </div>
+                </a>
+                <a href="/detail.html" class="portfolio-item">
+                    <img src="/img/portfolio05.jpg" alt="프로젝트 5">
+                    <div class="details">
+                        <h3>프로젝트 이름 5</h3>
+                        <p>프로젝트 설명 5</p>
+                    </div>
+                </a>
+                <a href="/detail.html" class="portfolio-item">
+                    <img src="/img/portfolio06.jpg" alt="프로젝트 6">
+                    <div class="details">
+                        <h3>프로젝트 이름 6</h3>
+                        <p>프로젝트 설명 6</p>
+                    </div>
+                </a>
                 <!-- 추가 프로젝트는 같은 형식으로 추가 -->
             </div>
         </div>
     </section>
 
     <!-- 스킬 섹션 -->
-    <section class="skills" id="skills">
+    <!-- <section class="skills" id="skills">
         <div class="container">
             <h2>스킬</h2>
             <div class="skills-list">
@@ -112,13 +132,12 @@
                     <img src="https://via.placeholder.com/50" alt="Git">
                     <p>Git</p>
                 </div>
-                <!-- 추가 스킬은 같은 형식으로 추가 -->
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- 연락처 섹션 -->
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
         <div class="container">
             <h2>연락처</h2>
             <form class="contact-form" action="#" method="post">
@@ -128,17 +147,12 @@
                 <button type="submit">보내기</button>
             </form>
         </div>
-    </section>
+    </section> -->
 
     <!-- 푸터 -->
     <footer>
         <div class="container">
-            <p>© 2024 [이름]. 모든 권리 보유.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">🔗</a>
-                <a href="#" target="_blank">🔗</a>
-                <a href="#" target="_blank">🔗</a>
-            </div>
+            <p>© 2024 박수종.</p>
         </div>
     </footer>
 

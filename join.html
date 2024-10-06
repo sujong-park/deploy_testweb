@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="Signup">
+        <div class="container">
+            <div class="form-container">
+                <div id="signup-form">
+                    <h2>로그인</h2>
+                    <!-- 프로필 이미지 미리보기 영역 -->
+                    <div class="profile-img-container">
+
+                        <!-- 파일 선택 input -->
+                        <input type="file" id="profile-image-input" accept="image/*" onchange="previewImage(event)">
+                        
+                        <!-- 기본 이미지 지정 (여기서 default-avatar.png는 기본 이미지 파일 경로) -->
+                        <label for="profile-image-input" class="profile-img default">
+                            <img id="profile-preview" src="/img/User.png" alt="Profile Image">
+                        </label>
+                        
+                    </div>
+                    
+                    <form>
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <label for="confirm-password">비밀번호 확인</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                        <button type="submit" onclick="signUp(event)">Sign Up</button>
+                    </form>
+                    <p><a href="login.html">이미 회원이신가요?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+

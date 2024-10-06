@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="view">
+        <div class="view-visual">
+            <img src="/img/portfolio04.jpg" alt="프로젝트">
+        </div>
+
+        <div class="view-feature">
+            <div class="container">
+                <div class="feature-wrap">
+                    <div class="card">
+                        <h2>특징</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus esse ullam ab nam ex rem error eum sapiente, molestias odit doloremque possimus voluptatum. Deserunt, voluptas laudantium? Ab, explicabo asperiores.</p>
+                    </div>
+                    <div class="card">
+                        <h2>특징</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus esse ullam ab nam ex rem error eum sapiente, molestias odit doloremque possimus voluptatum. Deserunt, voluptas laudantium? Ab, explicabo asperiores.</p>
+                    </div>
+                    <div class="card">
+                        <h2>특징</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus esse ullam ab nam ex rem error eum sapiente, molestias odit doloremque possimus voluptatum. Deserunt, voluptas laudantium? Ab, explicabo asperiores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-picture">
+            <div class="container">
+                <div class="picture-wrap">
+                    <div class="card"><img src="/img/portfolio05.jpg" alt=""></div>
+                    <div class="card"><img src="/img/portfolio06.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-text">
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate rem minima consequatur, delectus autem cumque vitae nesciunt atque aperiam non? Adipisci quod incidunt alias distinctio neque architecto quidem ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestiae et voluptatum labore dolor, doloremque cupiditate eum neque? Aliquam ut dolor omnis blanditiis nesciunt exercitationem repudiandae quia nostrum corrupti dicta.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, delectus voluptate, rerum soluta minima similique maxime hic exercitationem officiis deserunt perferendis odio? Minus repellendus laboriosam, est numquam ex reiciendis ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, officia? Dolor blanditiis quos saepe praesentium deserunt, recusandae eaque nulla, distinctio veniam culpa ea qui repellat libero tenetur corporis consectetur nemo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 박수종.</p>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+

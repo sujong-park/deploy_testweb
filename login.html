@@ -1,52 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbnb Style Login and Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-container">
-            <div id="signup-form">
-                <h2>Sign Up</h2>
-                  <!-- 프로필 이미지 미리보기 영역 -->
-                  <div class="profile-img-container">
-                    <!-- 기본 이미지 지정 (여기서 default-avatar.png는 기본 이미지 파일 경로) -->
-                    <img id="profile-preview" src="user_profile.png" alt="Profile Image">
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
                 </div>
+            </nav>
+        </div>
+    </header>
 
-                <!-- 파일 선택 input -->
-                <input type="file" id="profile-image-input" accept="image/*" onchange="previewImage(event)">
-                
-                <form>
-                    <input type="email" id="email" placeholder="Email" required>
-                    <input type="password" id="password" placeholder="Password" required>
-                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-                    <button type="submit" onclick="signUp(event)">Sign Up</button>
-                </form>
-                <p>Already have an account? <a href="#" onclick="showLoginForm()">Log In</a></p>
-            </div>
-
+    <div id="Login">
+        <div class="container">
             <div id="login-form" class="hidden">
-                <h2>Log In</h2>
+                <h2>로그인</h2>
                 <form>
+                    <label for="login-email">이메일</label>
                     <input type="email" id="login-email" placeholder="Email" required>
+                    <label for="login-password">비밀번호</label>
                     <input type="password" id="login-password" placeholder="Password" required>
                     <button type="submit" onclick="logIn(event)">Log In</button>
                 </form>
-                <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
-            </div>
-
-            <div id="profile" class="hidden">
-                <h2>Profile</h2>
-                <p>Email: <span id="profile-email"></span></p>
-                <button onclick="logOut()">Log Out</button>
+                <p> <a href="join.html">아직 회원이 아니신가요?</a></p>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
+
+
