@@ -79,7 +79,7 @@ nav ul#nav-member li#nav-signup {border: 1px solid #333;}
 
 /* 히어로 섹션 */
 .hero {
-    height: 60vw;
+    height: 50vw;
     background: url('/img/coding.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
