@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gasoek+One&family=Jua&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* common */
+.practice {}
+.practiceTit {text-align: center; margin: 0 0 100px;}
+.practice .contents {margin: 0 0 50px;}
+.practice .contents .chaper {margin: 20px 0;}
+
+
+#practice9 {padding: 150px 0;}
+
+
+#chap6-1 ul {display: flex; gap: 20px;}
+#chap6-1 ul li {flex: 1; line-height: 100px; text-align: center; border: 5px solid #000;}
+#chap6-1 ul li.textClass {border: 5px solid green;}
+
+#chap6-2 ul {display: flex; gap: 20px;}
+#chap6-2 ul li:nth-child(1) {border: 5px solid gray !important;}
+#chap6-2 ul li {flex: 1; line-height: 100px; text-align: center; border: 5px solid #000;}
+#chap6-2 ul li.textClass {border: 5px solid green;}
+#chap6-2 ul li#testId {border: 5px solid blue;}
+
+
+#chap6-3 ul {display: flex; gap: 20px; border: 5px solid black; color: red; padding: 20px;}
+#chap6-3 ul li {flex: 1; line-height: 60px; text-align: center; border: 5px solid #000;}
+
+
+#chap7-1 ul li {font-size: 50px; white-space: nowrap; overflow: hidden;}
+#chap7-2 ul li {font-size: 30px; padding: 10px;}
+
+
+#chap8-1 ul {display: flex; gap: 20px; justify-content: center;}
+#chap8-1 ul li {width: 250px; height: 250px; white-space: nowrap; overflow: hidden; background: url('/img/cat.jpg') no-repeat center center; background-size: cover;}
+#chap8-1 ul li:nth-child(1) {}
+#chap8-1 ul li:nth-child(2) {border-radius: 20px;}
+#chap8-1 ul li:nth-child(3) {border-radius: 50%;}
+
+
+

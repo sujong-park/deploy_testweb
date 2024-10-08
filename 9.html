@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/colors.js"></script>
+
+    <link rel="stylesheet" href="/css/practice.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
+                </ul>
+                <input id="night_day" type="button" value="night" onclick="nightDayHandler(this)">
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="practice9" class="practice">
+        <div class="practiceTit">
+            <h1>미니실습</h1>
+            <ol>
+                <li>5단원 ~ 9단원 의 내용중에서,</li>
+                <li>각 단원의 속성 스타일 3개 이상을</li>
+                <li>넷트리파이에서, 9.html 에 적용해보기.</li>
+            </ol>
+        </div>
+       <section>
+        <div class="container">
+            <div class="contents">
+                <h1>5단원</h1>
+                <div id="chap5-1" class="chaper">
+                    <h4>1. form - method "get"</h4>
+                    <form name="practice" method="get" action="">
+                        <input type="text" name="" id="userId">
+                        <input type="text" name="" id="userPass">
+                        
+                        <input type="submit" value="로그인">
+                    </form>
+                    <p>
+                        get 데이터를 256~4,096byte까지만 서버로 넘길 수 있습니다. 주소 표시줄에 사용자가 입력한 내용이 그대로 드러나는 단점이 있습니다.
+                    </p>
+                </div>
+                <div id="chap5-2" class="chaper">
+                    <h4>2. form - method "post"</h4>
+                    <form name="practice" method="post" action="">
+                        <input type="text" name="" id="userId1">
+                        <input type="text" name="" id="userPass1">
+
+                        <input type="submit" value="로그인">
+                    </form>
+                    <p>
+                        post는 입력한 내용의 길이에 제한받지 않고 사용자가 입력한 내용도 드러나지 않습니다.
+                    </p>
+                </div>
+                <div id="chap5-3" class="chaper">
+                    <h4>3. input - required</h4>
+                    <form action="">
+                        <ul>
+                            <li><input type="text" id="userId2" required></li>
+                            <li><input type="email" id="userEmail2" required></li>
+                            <li><input type="tel" id="userTel2" required></li>
+                        </ul>
+                        <input type="submit" value="로그인">
+                    </form>
+                    <p>
+                        필수 필드는 브라우저에서 직접 체크하는것이므로 오류메시지 내용은 브라우저들마다 다르게 나타남                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="contents">
+                <h1>6단원</h1>
+                <div id="chap6-1" class="chaper">
+                    <h4>1. CSS 선택자 - Class</h4>
+                    <ul>
+                        <li class="textClass">class</li>
+                        <li class="textClass">class</li>
+                        <li class="textClass">class</li>
+                        <li class="textClass">class</li>
+                        <li>x</li>
+                    </ul>
+                </div>
+                <div id="chap6-2" class="chaper">
+                    <h4>2. CSS 선택자 우선순위</h4>
+                    <ul>
+                        <li class="textClass">!important</li>
+                        <li style="border: 5px solid red;">인라인 스타일</li>
+                        <li class="textClass" id="testId">id</li>
+                        <li class="textClass">class</li>
+                        <li>type</li>
+                    </ul>
+                    <p>
+                        사용자 스타일 : 시스템에서 만든 스타일. 사용자가 제어할 수 없음<br>
+                        제작자 스타일 : 웹사이트를 만들 때 제작자가 만든 스타일<br>
+                        브라우저 스타일 : 브라우저의 기본 스타일<br>
+                        <br>
+                        !important : 어떤 스타일보다 우선 적용되는 스타일<br>
+                        인라인 스타일 : 특정 부분에만 적용되는 스타일. <br>
+                        id 스타일 : 문서안에서 한번만 사용됨<br>
+                        class 스타일 : 특정 태그에만 적용되는 스타일<br>
+                        타입스타일 : 문서안의 같은 태그에 모두 적용됨.
+                    </p>
+                </div>
+                <div id="chap6-3" class="chaper">
+                    <h4>3. CSS 스타일 상속</h4>
+                    <ul>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                    </ul>
+                    <p>
+                        자식 요소에서 별도로 스타일을 지정하지 않으면 부모 요소에 있는 스타일 속성들이 자식 요소로 전달됨.<br>
+                        상속을 이용하면 스타일시트를 효과적으로 만들 수 있다<br>
+                        주의할 것은 스타일의 모든 속성이 부모 요소에서 자식 요소로 상속되는 것은 아니라는 점<br>
+                        (예, 글자 색은 상속되지만 배경색은 상속되지 않음)
+                    </p>
+                </div>
+            </div>
+
+            <div class="contents">
+                <h1>7단원</h1>
+                <div id="chap7-1" class="chaper">
+                    <h4>1. web fonts</h4>
+                    <ul>
+                        <li style="font-family: 'Gasoek One', sans-serif;">인권에 대한 무시와 경멸이 인류의 양심을 격분시키는 만행을 초래하였으며, 인간이 언론과 신앙의 자유, 그리고 공포와</li>
+                        <li style="font-family: 'Jua', sans-serif;">인권에 대한 무시와 경멸이 인류의 양심을 격분시키는 만행을 초래하였으며, 인간이 언론과 신앙의 자유, 그리고 공포와</li>
+                        <li style="font-family: 'Black Han Sans', sans-serif;">인권에 대한 무시와 경멸이 인류의 양심을 격분시키는 만행을 초래하였으며, 인간이 언론과 신앙의 자유, 그리고 공포와</li>
+                        <li style="font-family: 'Nanum Pen Script', sans-serif;">인권에 대한 무시와 경멸이 인류의 양심을 격분시키는 만행을 초래하였으며, 인간이 언론과 신앙의 자유, 그리고 공포와</li>
+                        <li style="font-family: 'Noto Sans KR', sans-serif;">인권에 대한 무시와 경멸이 인류의 양심을 격분시키는 만행을 초래하였으며, 인간이 언론과 신앙의 자유, 그리고 공포와</li>
+                    </ul>
+                    <p>
+                        웹문서안에 글꼴 정보도 함께 저장했다가 사용자가 웹문서에 접속하면 글꼴을 사용자 시스템으로 다운로드시켜 사용하는 글꼴<br>
+                        사용자 시스템에 없는 글꼴이더라도 웹제작자가 의도한대로 텍스트를 표시할 수 있다.<br>
+                        @font-face 속성 사용
+                    </p>
+                </div>
+                <div id="chap7-2" class="chaper">
+                    <h4>2. 글자 정렬</h4>
+                    <ul>
+                        <li style="text-align: left;">인권에 대한 무시와 경멸이 인류의 양심을</li>
+                        <li style="text-align: center;">인권에 대한 무시와 경멸이 인류의 양심을</li>
+                        <li style="text-align: right;">인권에 대한 무시와 경멸이 인류의 양심을</li>
+                    <p>
+                        웹문서안에 글꼴 정보도 함께 저장했다가 사용자가 웹문서에 접속하면 글꼴을 사용자 시스템으로 다운로드시켜 사용하는 글꼴<br>
+                        사용자 시스템에 없는 글꼴이더라도 웹제작자가 의도한대로 텍스트를 표시할 수 있다.<br>
+                        @font-face 속성 사용
+                    </p>
+                </div>
+                <div id="chap7-2" class="chaper">
+                    <h4>2. 글자 간격</h4>
+                    <ul>
+                        <li style="letter-spacing: 0.5em">자간자간자간자간자간자간</li>
+                        <li style="letter-spacing: 1em">자간자간자간자간자간자간</li>
+                        <li style="letter-spacing: 1.5em">자간자간자간자간자간자간</li>
+                    </ul>
+                    <ul style="display: flex; align-items: flex-start; gap: 20px;">
+                        <li style="flex: 1; line-height: 1em; border: 1px solid black;">행간행간행간</li>
+                        <li style="flex: 1; line-height: 1.5em; border: 1px solid black;">행간행간행간</li>
+                        <li style="flex: 1; line-height: 2em; border: 1px solid black;">행간행간행간</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contents">
+                <h1>8단원</h1>
+                <div id="chap8-1" class="chaper">
+                    <h4>1. border-radius</h4>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <p>
+                    박스모델의 테두리를 둥글게 처리<br>
+                    박스모델의 꼭짓점 부분에 원(반지름r)이 있다고 가정해서 둥글게 처리
+                </p>
+            </div>
+        </div>
+       </section>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 박수종.</p>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+
