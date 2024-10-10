@@ -5,7 +5,7 @@
 .practiceTit {text-align: center; margin: 0 0 100px;}
 .practice .contents {margin: 0 0 50px;}
 .practice .contents .chaper {margin: 20px 0;}
-
+.practice .contents .chaper p {margin: 0 0 20px;}
 
 #practice9 {padding: 150px 0;}
 
@@ -34,6 +34,126 @@
 #chap8-1 ul li:nth-child(1) {}
 #chap8-1 ul li:nth-child(2) {border-radius: 20px;}
 #chap8-1 ul li:nth-child(3) {border-radius: 50%;}
+
+
+#chap10-1 ul {display: flex; gap: 20px; border: 5px solid black; padding: 20px;}
+#chap10-1 ul > * {flex: 1; line-height: 100px; border: 5px solid black; text-align: center;}
+
+#chap10-1 ul:nth-of-type(1) div {border: 5px solid blue;}
+#chap10-1 ul:nth-of-type(2) > li {display: flex; justify-content: center; line-height: 60px; padding: 10px; gap: 20px; text-align: center; border: 5px solid purple;}
+#chap10-1 ul:nth-of-type(2) li span {flex: 1; display: block; border: 5px solid black;}
+#chap10-1 ul:nth-of-type(3) div + li {border: 5px solid green;}
+#chap10-1 ul:nth-of-type(4) div ~ li {border: 5px solid red;}
+
+
+#chap10-2 ul {display: flex; gap: 20px;}
+#chap10-2 ul li {flex: 1;}
+#chap10-2 ul li a {display: block; width: 100%; line-height: 100px; border: 5px solid black; text-align: center;}
+#chap10-2 ul:nth-of-type(1) li a[href] {border-color: gray;}
+#chap10-2 ul:nth-of-type(1) li a[target="_blank"] {border-color: blue;}
+
+#chap10-2 ul:nth-of-type(2) li {border: 5px solid black; line-height: 100px; text-align: center;}
+#chap10-2 ul:nth-of-type(2) li[class~="test1"] {border: 5px solid red;}
+#chap10-2 ul:nth-of-type(2) li[class|="test2"] {border: 5px solid green;}
+#chap10-2 ul:nth-of-type(2) li[class^="test3"] {border: 5px solid blue;}
+#chap10-2 ul:nth-of-type(2) li[class*="test4"] {border: 5px solid purple;}
+#chap10-2 ul:nth-of-type(2) li[class*="test5"] {border: 5px solid yellowgreen;}
+
+#chap10-3 div {height: 100px; border: 5px solid black;}
+#chap10-3 div:nth-of-type(1):active {background: red;}
+#chap10-3 div:nth-of-type(2):hover {background: #c0c0c0}
+#chap10-3 input:focus {outline: none; border-color: blue}
+
+#chap11-1 ul {display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;}
+#chap11-1 ul li .img {width: 250px; height: 250px;}
+#chap11-1 ul li .img img {width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;}
+#chap11-1 ul li.scale .img {overflow: hidden;}
+#chap11-1 ul li.scale:hover .img img {transform: scale(1.2);}
+#chap11-1 ul li.translate:hover .img img {transform: translate(10px, 10px);}
+#chap11-1 ul li.rotate:hover .img img {transform: rotate(5deg);}
+
+#chap11-2 ul {display: flex; gap: 20px; justify-content: center; height: 500px; border: 5px solid black; padding: 20px;}
+#chap11-2 ul li {flex: 1;}
+#chap11-2 ul li div {height: 100px; background: black; color: #fff; text-align: center; transition: height 0.5s;}
+#chap11-2 ul:hover li div {height: 100%;}
+#chap11-2 ul:hover li:nth-of-type(1) div {transition-timing-function: ease;} 
+#chap11-2 ul:hover li:nth-of-type(2) div {transition-timing-function: linear;} 
+#chap11-2 ul:hover li:nth-of-type(3) div {transition-timing-function: ease-in;} 
+#chap11-2 ul:hover li:nth-of-type(4) div {transition-timing-function: ease-out;} 
+
+
+#chap11-3 ul {display: flex; gap: 20px; justify-content: center;}
+#chap11-3 ul li {width: 250px; height: 250px; background: url('/img/cat.jpg') no-repeat center center; background-size: cover;}
+#chap11-3 ul li:nth-of-type(1) {animation: test1 5s infinite linear;}
+#chap11-3 ul li:nth-of-type(2) {animation: test2 2s infinite linear alternate-reverse;}
+#chap11-3 ul li:nth-of-type(3) {animation: test3 2s infinite;}
+@keyframes test1 {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+@keyframes test2 {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+@keyframes test3 {
+    from {border-radius: 0;}
+    to {border-radius: 50%;}
+}
+
+
+#chap12-1 ul {display: flex; border: 5px solid black; flex-wrap: wrap;}
+#chap12-1 ul li {width: calc(100% / 5); padding: 10px;}
+#chap12-1 ul li div {line-height: 150px; text-align: center; border: 5px solid black;}
+#chap12-1 ul li div::after {content: "5개";}
+
+@media (max-width: 1440px) {
+    #chap12-1 ul li {width: calc(100% / 4);}
+    #chap12-1 ul li div::after {content: "4개";}    
+}
+@media (max-width: 1024px) {
+    #chap12-1 ul li {width: calc(100% / 3);}
+    #chap12-1 ul li div::after {content: "3개";}    
+}
+@media (max-width: 768px) {
+    #chap12-1 ul li {width: calc(100% / 2);}
+    #chap12-1 ul li div::after {content: "2개";}    
+}
+@media (max-width: 576px) {
+    #chap12-1 ul li {width: calc(100% / 1);}
+    #chap12-1 ul li div::after {content: "1개";}    
+}
+
+#chap12-2 ul {display: flex; border: 5px solid black; flex-wrap: wrap; padding: 20px; gap: 20px;}
+#chap12-2 ul li {width: 150px; line-height: 60px; text-align: center; padding: 10px; background: black; color: #fff;}
+
+#chap12-2 ul:nth-of-type(2) {justify-content: center;}
+#chap12-2 ul:nth-of-type(3) {justify-content: flex-end;}
+#chap12-2 ul:nth-of-type(4) {justify-content: space-between;}
+#chap12-2 ul:nth-of-type(5) {justify-content: space-around;}
+
+#chap12-2 ul:nth-of-type(n + 6) {height: 300px;}
+#chap12-2 ul:nth-of-type(n + 6) li {flex: 1;}
+#chap12-2 ul:nth-of-type(6) {align-items: flex-start;}
+#chap12-2 ul:nth-of-type(7) {align-items: center;}
+#chap12-2 ul:nth-of-type(8) {align-items: flex-end;}
+#chap12-2 ul:nth-of-type(9) {align-items: flex-start;}
+#chap12-2 ul:nth-of-type(9) li:nth-child(2) {align-self: flex-end;}
+#chap12-2 ul:nth-of-type(9) li:nth-child(4) {align-self: center;}
+
+#chap12-3 ul {display: grid; grid-template-columns:repeat(5, 1fr); grid-gap:20px;}
+#chap12-3 ul li {background: black; color: #fff; line-height: 100px;}
+#chap12-3 ul li div {display: flex; align-items: center; justify-content: center; height: 100%;}
+#chap12-3 ul li:nth-child(1) {grid-column:1/3; grid-row: 1/3;}
+#chap12-3 ul li:nth-child(7) {grid-column:5/6; grid-row: 2/4;}
+#chap12-3 ul li:nth-child(13) {grid-column:2/4; grid-row: 4/4;}
+
+
+#chap13-1 ul {display: flex; gap: 20px;}
+#chap13-1 ul li {flex: 1;}
+#chap13-1 ul li button {line-height: 100px;background: black; color: #fff; width: 100%; border: 0; border-radius: 10px; cursor: pointer;}
+
+
+
 
 
 

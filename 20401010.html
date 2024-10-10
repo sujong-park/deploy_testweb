@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/colors.js"></script>
+
+    <link rel="stylesheet" href="/css/practice.css">
+    <script src="js/practice.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
+                </ul>
+                <input id="night_day" type="button" value="night" onclick="nightDayHandler(this)">
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="practice9" class="practice">
+        <div class="practiceTit">
+            <h1>미니실습</h1>
+            <ol>
+                <li>1024.10.10</li>
+                <li>10단원 ~</li>
+            </ol>
+        </div>
+       <section>
+        <div class="container">
+            <div class="contents">
+                <h1>10단원</h1>
+                <div id="chap10-1" class="chaper">
+                    <h4>1. 연결선택자</h4>
+                    <ul>
+                        <li>ul > li</li>
+                        <li>ul > li</li>
+                        <div>ul > div</div>
+                        <li>ul > li</li>
+                        <div>ul > div</div>
+                    </ul>
+                    <p>
+                        - 하위선택자(descendant selector) : 부모 요소에 포함된 모든 하위요소에 스타일이 적용
+                    </p>
+                    <ul>
+                        <li><span>손자</span><span>손자</span></li>
+                        <li><span>손자</span><span>손자</span></li>
+                        <li>자식</li>
+                    </ul>
+                    <p>
+                        - 자식선택자(child selector) : 자식 요소에 스타일을 적용하는 선택자
+                    </p>
+                    <ul>
+                        <div>ul > div</div>
+                        <li>ul > li</li>
+                        <li>ul > li</li>
+                        <li>ul > li</li>
+                        <li>ul > li</li>
+                    </ul>
+                    <p>
+                        - 인접형제선택자(adjacent selector) : 같은 부모를 가진 형제 요소중 첫번째 동생 요소에만 스타일 적용<br>
+                    </p>
+                    <ul>
+                        <div>ul > div</div>
+                        <li>형제</li>
+                        <li>형제</li>
+                        <li>형제</li>
+                        <li>형제</li>
+                    </ul>
+                    <p>
+                        - 형제선택자(sibling selector) : 형제 요소들에 스타일 적용
+                    </p>
+                </div>
+                <div id="chap10-2" class="chaper">
+                    <h4>2. 속성 선택자</h4>
+                    <ul>
+                        <li><a href>속성 href</a></li>
+                        <li><a href target="_blank">속성 href, target="_blank"</a></li>
+                        <li><a href>속성 href</a></li>
+                        <li><a>X</a></li>
+                        <li><a href>속성 href</a></li>
+                    </ul>
+                    <p>
+                        지정한 속성을 가진 요소를 찾아 스타일 적용
+                    </p>
+                    <ul>
+                        <li class="test1">[속성~=값]</li>
+                        <li class="test2-aa">[속성 |=  값]</li>
+                        <li class="test3aa">[속성^=값] 선택자</li>
+                        <li class="test4-1 test4">[속성 $=  값] 선택자</li>
+                        <li class="aatest5aa">[속성*=값]</li>
+                    </ul>
+                    <p>
+                        [속성~=값] : 여러 속성값중에 해당 값이 포함되어 있는 요소를 찾아 스타일 적용<br>
+                        [속성 |=  값] : 특정 값이 포함된 속성을 가진 요소를 찾아 스타일 적용<br>
+                        [속성^=값] : 특정 값으로 시작하는 속성을 가진 요소를 찾아 스타일 적용<br>
+                        [속성 $=  값] : 특정 값으로 끝나는 속성을 가진 요소를 찾아 스타일 적용<br>
+                        [속성*=값] : 값의 일부가 일치하는 속성을 가진 요소를 찾아 스타일 적용
+                    </p>
+                </div>
+                <div id="chap10-3" class="chaper">
+                    <h4>3. 가상클래스</h4>
+                    <div></div>
+                    <p>
+                        :active - 웹 요소를 활성화했을 때의 스타일 적용<br>
+                    </p>
+                    <div></div>
+                    <p>
+                        :hover - 웹 요소에 마우스 커서를 올려놓을때의 스타일 적용<br>
+                    </p>
+                    <input type="text">
+                    <p>
+                        :focus - 웹 요소에 초점이 맞추어졌을 때의 스타일 적용
+                    </p>
+                </div>
+            </div>
+
+            <div class="contents">
+                <h1>11단원</h1>
+                <div id="chap11-1" class="chaper">
+                    <h4>1. transform</h4>
+                    <ul>
+                        <li class="scale"><div class="img"><img src="/img/cat.jpg" alt=""></div><div class="txt">scale</div></li>
+                        <li class="translate"><div class="img"><img src="/img/cat.jpg" alt=""></div><div class="txt">translate</div></li>
+                        <li class="rotate"><div class="img"><img src="/img/cat.jpg" alt=""></div><div class="txt">rotate</div></li>
+                    </ul>
+                </div>
+                <div id="chap11-2" class="chaper">
+                    <h4>2. transition</h4>
+                    <ul>
+                        <li class="ease"><div>ease</div></li>
+                        <li class="linear"><div>linear</div></li>
+                        <li class="ease-in"><div>ease-in</div></li>
+                        <li class="ease-out"><div>ease-out</div></li>
+                    </ul>
+                </div>
+                <div id="chap11-3" class="chaper">
+                    <h4>3. animation</h4>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contents">
+                <h1>12단원</h1>
+                <div id="chap12-1" class="chaper">
+                    <h4>1. 반응형</h4>
+                    <ul>
+                        <li><div></div></li>
+                        <li><div></div></li>
+                        <li><div></div></li>
+                        <li><div></div></li>
+                        <li><div></div></li>
+                    </ul>
+                    <p>웹사이트의 내용을 그대로 유지하면서 다양한 화면 크기에 맞게 웹사이트를 표시하는 방법</p>
+                </div>
+                <div id="chap12-2" class="chaper">
+                    <h4>2. flex</h4>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>justify-content: flex-start</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>justify-content: center</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>justify-content: flex-end</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>justify-content: space-between</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>justify-content: space-around</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>align-items: flex-start</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>align-items: center</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>align-items: flex-end</p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <p>align-self</p>
+
+                </div>
+                <div id="chap12-3" class="chaper">
+                    <h4>3. grid</h4>
+                    <ul>
+                        <li><div>1</div></li>
+                        <li><div>2</div></li>
+                        <li><div>3</div></li>
+                        <li><div>4</div></li>
+                        <li><div>5</div></li>
+                        <li><div>6</div></li>
+                        <li><div>7</div></li>
+                        <li><div>8</div></li>
+                        <li><div>9</div></li>
+                        <li><div>10</div></li>
+                        <li><div>11</div></li>
+                        <li><div>12</div></li>
+                        <li><div>13</div></li>
+                        <li><div>14</div></li>
+                        <li><div>15</div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contents">
+                <h1>13단원</h1>
+                <div id="chap13-1" class="chaper">
+                    <h4>1. JavaScript</h4>
+                    <ul>
+                        <li><button id="chap13Color" value="default" onclick="practiceColor()">color change</button></li>
+                        <li><button id="chap13Text" onclick="practiceText()">text change</button></li>
+                        <li><button id="chap13Confirm" onclick="practiceConfirm()">confirm message</button></li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+       </section>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 박수종.</p>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+
