@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/colors.js"></script>
+
+    <link rel="stylesheet" href="/css/practice.css">
+    <script src="js/lunchMenu.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Home</a></div>
+                <ul id="nav-links">
+                    <li><a href="/#portfolio">Protfolio</a></li>
+                    <!-- <li><a href="#skills">스킬</a></li> -->
+                    <!-- <li><a href="#contact">연락처</a></li> -->
+                </ul>
+                <ul id="nav-member">
+                    <li id="nav-login"><a href="login.html">로그인</a></li>
+                    <li id="nav-signup"><a href="join.html">회원가입</a></li>
+                </ul>
+                <input id="night_day" type="button" value="night" onclick="nightDayHandler(this)">
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="practice11" class="practice">
+        <div class="practiceTit">
+            <h1>미니실습</h1>
+            <ol>
+                <li>1024.10.11</li>
+                <li>먹고 싶은 메뉴 또는 즐겨 찾기하는 메뉴 이름, 가격 , li 표기</li>
+                <li>해당 정보를 클릭시, 결과 화면(이미지, 이름, 가격 등)</li>
+            </ol>
+        </div>
+       <section>
+        <div class="container">
+            <div id="lunchMenu">
+                <ul id="restauList">
+                    <li>
+                        <a href="#" onclick="changeMenu('bao')">
+                            <div class="thumb"><img src="img/menu/bao_thumb.jpg" alt=""></div>
+                            <div class="info">
+                                <div class="tit">바오하우스</div>
+                                <div class="txt">중식당</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="changeMenu('kanda')">
+                            <div class="thumb"><img src="img/menu/kanda_thumb.png" alt=""></div>
+                            <div class="info">
+                                <div class="tit">칸다소바</div>
+                                <div class="txt">일본식라면</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="changeMenu('ant')">
+                            <div class="thumb"><img src="img/menu/ant_thumb.jpg" alt=""></div>
+                            <div class="info">
+                                <div class="tit">개미집</div>
+                                <div class="txt">낙지요리</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div id="restauView">
+                    <!-- <div class="viewImg">
+                        <img src="/img/menu/kanda_thumb.png" alt="">
+                    </div>
+                    <div class="viewInfo">
+                        <div class="title">
+                            <div class="tit">바오하우스</div>
+                            <div class="sub">중식당</div>
+                        </div>
+                        <div class="viewMenu">
+                            <h3 class="tit">Menu</h3>
+                            <ul class="menuList">
+                                <li><div class="menuName">가지튀김</div><div class="menuPrice">14,000원</div></li>
+                                <li><div class="menuName">가지튀김</div><div class="menuPrice">14,000원</div></li>
+                                <li><div class="menuName">가지튀김</div><div class="menuPrice">14,000원</div></li>
+                                <li><div class="menuName">가지튀김</div><div class="menuPrice">14,000원</div></li>
+                                <li><div class="menuName">가지튀김</div><div class="menuPrice">14,000원</div></li>
+                                <li><div class="menuName">가지튀김</div><div class="menuPrice">14,000원</div></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div id="viewDefault">먹고 싶은 메뉴를 클릭해주세요.</div>
+                </div>
+            </div>
+        </div>
+       </section>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 박수종.</p>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트: 모바일 메뉴 토글 -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+

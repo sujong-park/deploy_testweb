@@ -9,7 +9,6 @@
 
 #practice9 {padding: 150px 0;}
 
-
 #chap6-1 ul {display: flex; gap: 20px;}
 #chap6-1 ul li {flex: 1; line-height: 100px; text-align: center; border: 5px solid #000;}
 #chap6-1 ul li.textClass {border: 5px solid green;}
@@ -152,6 +151,38 @@
 #chap13-1 ul li {flex: 1;}
 #chap13-1 ul li button {line-height: 100px;background: black; color: #fff; width: 100%; border: 0; border-radius: 10px; cursor: pointer;}
 
+
+
+#practice11 {font-family: "Noto Sans KR", serif;  padding: 150px 0;}
+
+#lunchMenu {display: flex; height: 500px; border: 1px solid #ececec;}
+
+#restauList {width: 340px; background: #f9f9f9; padding: 20px; overflow: auto;}
+#restauList li {background: #fff; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);}
+#restauList li:not(:last-child) {margin: 0 0 20px;}
+#restauList li a {position: relative; display: block; padding: 15px;}
+#restauList li a::after {content: ""; display: block; clear: both;}
+#restauList li a .thumb {float: left; width: 80px; height: 80px; border-radius: 10px; overflow: hidden;}
+#restauList li a .thumb img {object-fit: cover; width: 100%; height: 100%;}
+#restauList li a .info {padding: 0 0 0 100px;}
+#restauList li a .info .tit {font-size: 18px; font-weight: 600;}
+#restauList li a .info .txt {font-size: 14px; color: #666;}
+
+
+#restauView {flex: 1; padding: 20px; overflow: auto;}
+#restauView .viewImg {height: 200px; border-radius: 15px; overflow: hidden;}
+#restauView .viewImg img {object-fit: cover; width: 100%; height: 100%;}    
+#restauView .viewInfo {padding: 10px;}
+#restauView .viewInfo .title {display: flex; align-items: baseline; justify-content: space-between; margin: 0 0 20px;}
+#restauView .viewInfo .title .tit {font-size: 25px; font-weight: 800;}
+#restauView .viewInfo .title .sub {font-size: 14px; color: #666;}
+#restauView .viewInfo .viewMenu h3 {font-size: 20px; font-weight: 600;}
+#restauView .viewInfo .viewMenu ul li {display: flex; align-items: center; margin: 10px 0 0;} 
+#restauView .viewInfo .viewMenu ul li::after {order: 2; content: ""; display: block; width: 100px; height: 0; border-top: 2px dotted #ececec; margin: 0 20px; flex: 1;}
+#restauView .viewInfo .viewMenu ul li .menuName {order: 1;}
+#restauView .viewInfo .viewMenu ul li .menuPrice {order: 3;}
+
+#restauView #viewDefault {display: flex; align-items: center; justify-content: center; height: 100%; background: #f9f9f9; border-radius: 15px; color: #999;}
 
 
 
