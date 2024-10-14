@@ -2,7 +2,7 @@ function changeMenu(menu, message){
     // document.querySelector('#viewDefault').remove();
     var result = document.querySelector('#restauView');
     
-    if (menu === "bao") {
+    if (menu === "1") {
         baoInner = 
         `<div class="viewImg">
             <img src="/img/menu/bao_thumb.jpg" alt="">
@@ -35,7 +35,7 @@ function changeMenu(menu, message){
             </div>
         </div>`;
 
-    } else if (menu === "kanda") {
+    } else if (menu === "2") {
         baoInner = 
         `<div class="viewImg">
             <img src="/img/menu/kanda_thumb.png" alt="">
@@ -63,17 +63,17 @@ function changeMenu(menu, message){
                 </ul>
             </div>
         </div>`;
-    } else if (menu === "ant") {
+    } else if (menu === "3") {
         baoInner = 
         `<div class="viewImg">
             <img src="/img/menu/ant_thumb.jpg" alt="">
         </div>
-        <div class="viewMessage"></div>
         <div class="viewInfo">
             <div class="title">
                 <div class="tit">개미집</div>
                 <div class="sub">낙지요리</div>
             </div>
+            <div class="viewMessage"></div>
             <div class="viewMenu">
                 <h3 class="tit">Menu</h3>
                 <ul class="menuList">
@@ -86,17 +86,17 @@ function changeMenu(menu, message){
                 </ul>
             </div>
         </div>`;
-    } else if (menu === "handduck") {
+    } else if (menu === "4") {
         baoInner = 
         `<div class="viewImg">
             <img src="/img/menu/ant_thumb.jpg" alt="">
         </div>
-        <div class="viewMessage"></div>
         <div class="viewInfo">
             <div class="title">
                 <div class="tit">한뚝배기</div>
                 <div class="sub">백반,가정식</div>
             </div>
+            <div class="viewMessage"></div>
             <div class="viewMenu">
                 <h3 class="tit">Menu</h3>
                 <ul class="menuList">
@@ -118,17 +118,18 @@ function changeMenu(menu, message){
                 </ul>
             </div>
         </div>`;
-    } else if (menu === "younge") {
+    } else if (menu === "5") {
         baoInner = 
         `<div class="viewImg">
             <img src="/img/menu/younge_thumb.jpg" alt="">
         </div>
-        <div class="viewMessage"></div>
+        
         <div class="viewInfo">
             <div class="title">
                 <div class="tit">용이초밥</div>
                 <div class="sub">초밥, 롤</div>
             </div>
+            <div class="viewMessage"></div>
             <div class="viewMenu">
                 <h3 class="tit">Menu</h3>
                 <ul class="menuList">
@@ -150,5 +151,57 @@ function changeMenu(menu, message){
     document.querySelector('.viewMessage').innerHTML = message;
 
 }
+
+function randomMenu() {
+    var restaurants = document.getElementsByClassName('restaurant');
+    var randomNum = Math.floor(Math.random() * restaurants.length); 
+
+    console.log(randomNum);
+
+    var anchorTag = restaurants[randomNum].getElementsByTagName('a')[0];
+    anchorTag.click();
+}
+
+
+
+function newRegister(){
+    var newItem = document.createElement('li');
+    var newMenu = document.querySelector('#addMenu');
+    var newText = document.createTextNode(newMenu.value);
+
+    newItem.appendChild(newText);
+    
+    var itemList = document.querySelector("#addMenuList");
+    itemList.insertBefore(newItem, itemList.childNodes[0]); 
+    
+    newMenu.value="";
+    // if (newMenu.value != ""){
+
+    //     // alert("먹고 싶은 메뉴를 작성해주세요.");
+    // } else {
+    // }
+    
+    
+    var menuItems = document.querySelector('#addMenuList').querySelectorAll("li"); 
+    console.log(menuItems);
+    
+
+
+    for(i=0; i<menuItems.length; i++) {
+        menuItems[i].addEventListener("click", function() {  // 항목 클릭했을 때 실행할 함수
+            if(this.parentNode)    // 부모 노드가 있다면 
+            this.parentNode.removeChild(this);  // 부모 노드에서 삭제
+        });
+    }
+    
+
+
+
+}
+
+
+
+
+
 
 

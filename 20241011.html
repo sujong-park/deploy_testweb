@@ -46,8 +46,9 @@
         <div class="container">
             <div id="lunchMenu">
                 <ul id="restauList">
-                    <li>
-                        <a href="javascript:void(0);" onclick="changeMenu('bao', '맛있다던데 너무 멀어서 못감.')">
+                    <button id="randomMenu" onclick="randomMenu()">오늘 뭐 먹지</button>
+                    <li class="restaurant">
+                        <a href="javascript:void(0);" onclick="changeMenu('1', '맛있다던데 너무 멀어서 못감.')">
                             <div class="thumb"><img src="img/menu/bao_thumb.jpg" alt=""></div>
                             <div class="info">
                                 <div class="tit">바오하우스</div>
@@ -55,8 +56,8 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);" onclick="changeMenu('kanda', '사람이 많다는 소문을 들어서 못감.')">
+                    <li class="restaurant">
+                        <a href="javascript:void(0);" onclick="changeMenu('2', '사람이 많다는 소문을 들어서 못감.')">
                             <div class="thumb"><img src="img/menu/kanda_thumb.png" alt=""></div>
                             <div class="info">
                                 <div class="tit">칸다소바</div>
@@ -64,8 +65,8 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);" onclick="changeMenu('ant', '찌짐이 맛있음.')">
+                    <li class="restaurant">
+                        <a href="javascript:void(0);" onclick="changeMenu('3', '찌짐이 맛있음.')">
                             <div class="thumb"><img src="img/menu/ant_thumb.jpg" alt=""></div>
                             <div class="info">
                                 <div class="tit">개미집</div>
@@ -73,8 +74,8 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);" onclick="changeMenu('handduck', '혼자가면 눈치보임.')">
+                    <li class="restaurant">
+                        <a href="javascript:void(0);" onclick="changeMenu('4', '혼자가면 눈치보임.')">
                             <div class="thumb"><img src="img/menu/handduck_thumb.jpg" alt=""></div>
                             <div class="info">
                                 <div class="tit">한뚝배기</div>
@@ -82,8 +83,8 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);" onclick="changeMenu('younge', '낫베드.')">
+                    <li class="restaurant">
+                        <a href="javascript:void(0);" onclick="changeMenu('5', '낫베드.')">
                             <div class="thumb"><img src="img/menu/younge_thumb.jpg" alt=""></div>
                             <div class="info">
                                 <div class="tit">용이초밥</div>
@@ -113,7 +114,16 @@
                             </ul>
                         </div>
                     </div> -->
-                    <div id="viewDefault">먹고 싶은 메뉴를 클릭해주세요.</div>
+                    <div id="viewDefault">
+                        <div class="tit">먹고 싶은 메뉴를 클릭해주세요.</div>
+                        <div id="addMenuWrap">
+                            <div class="txt">
+                                <input id="addMenu" type="text" name="" placeholder="먹고 싶은 메뉴를 추가해주세요">
+                                <button onclick="newRegister(); return false;">추가</button>
+                            </div>
+                        </div>
+                        <ul id="addMenuList"></ul>
+                    </div>
                 </div>
             </div>
         </div>
