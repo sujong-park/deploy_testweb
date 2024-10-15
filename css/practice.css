@@ -191,6 +191,8 @@
 #restauView #viewDefault #addMenuWrap .txt input {display: block; border: 1px solid #c0c0c0; width: 250px; line-height: 45px; border-radius: 10px; padding: 0 15px; outline: none;}
 #restauView #viewDefault #addMenuWrap .txt button {padding: 0 20px; background: #000; color: #fff; border: none; border-radius: 10px; margin: 0 0 0 5px; cursor: pointer; font-weight: 800;}
 #restauView #viewDefault #addMenuList {display: flex; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 350px; margin: 10px 0 0; gap: 10px;}
-#restauView #viewDefault #addMenuList li {line-height: 40px; background: #fff; border: 1px solid #c0c0c0; padding: 0 15px; border-radius: 10px; cursor: pointer;}
+#restauView #viewDefault #addMenuList li {display: flex; align-items: center; line-height: 40px; background: #fff; border: 1px solid #c0c0c0; padding: 0 0 0 15px; border-radius: 10px; cursor: pointer;}
+#restauView #viewDefault #addMenuList li span {position: relative; display: block; height: 40px; width: 40px; border: 0; margin: 0 0 0 5px; background: url('/img/close.svg') no-repeat center center; background-size: 17px; opacity: 0.5;}
+#restauView #viewDefault #addMenuList li span:hover {opacity: 1; transition: opacity 0.2s;}
 
 

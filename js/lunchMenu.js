@@ -166,26 +166,24 @@ function randomMenu() {
 
 function newRegister(){
     var newItem = document.createElement('li');
+    var newItemBtn = document.createElement('span');
     var newMenu = document.querySelector('#addMenu');
     var newText = document.createTextNode(newMenu.value);
 
     newItem.appendChild(newText);
+    newItem.appendChild(newItemBtn);
     
-    var itemList = document.querySelector("#addMenuList");
-    itemList.insertBefore(newItem, itemList.childNodes[0]); 
-    
-    newMenu.value="";
-    // if (newMenu.value != ""){
+    if (newMenu.value != ""){
+        var itemList = document.querySelector("#addMenuList");
+        itemList.insertBefore(newItem, itemList.childNodes[0]); 
+        
+        newMenu.value="";
+    } else {
+        alert("먹고 싶은 메뉴를 작성해주세요.");
 
-    //     // alert("먹고 싶은 메뉴를 작성해주세요.");
-    // } else {
-    // }
-    
+    }
     
     var menuItems = document.querySelector('#addMenuList').querySelectorAll("li"); 
-    console.log(menuItems);
-    
-
 
     for(i=0; i<menuItems.length; i++) {
         menuItems[i].addEventListener("click", function() {  // 항목 클릭했을 때 실행할 함수
